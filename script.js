@@ -8,6 +8,14 @@ function calculateScores() {
     const teamInputs = document.querySelectorAll('.team-input');
     const differences = document.querySelectorAll('.difference');
     
+    // Reset all previous calculations and differences
+    differences.forEach((diff) => {
+        diff.textContent = '-';
+    });
+    document.getElementById('personalScore').textContent = '-';
+    document.getElementById('teamScore').textContent = '-';
+    /* document.getElementById('totalDifference').textContent = '-'; */
+    
     let personalTotal = 0;
     let teamTotal = 0;
     let allPersonalFilled = true;
