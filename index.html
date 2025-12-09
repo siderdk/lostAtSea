@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost at sea solution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+       <div class="container">
+        <h1>🌊 Lost at Sea 🌊</h1>
+        <p class="subtitle">Survival Ranking Exercise</p>
+
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p><strong>1.</strong> Enter your individual ranking (1-15) for each item in the "Your Ranking" column.</p>
+            <p><strong>2.</strong> After team discussion, enter your team's ranking in the "Team Ranking" column.</p>
+            <p><strong>3.</strong> Click "Calculate Scores" to see how well you and your team did!</p>
+            <p><strong>Note:</strong> Lower scores are better. The score is the total difference between your rankings and the expert rankings.</p>
+        </div>
+
+        <table id="rankingTable">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Item</th>
+                    <th style="width: 8%;">Expert Rank</th>
+                    <th style="width: 37%;">Expert Reasoning</th>
+                    <th style="width: 12%;">Your Ranking</th>
+                    <th style="width: 12%;">Team Ranking</th>
+                    <th style="width: 11%;">Your Difference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="item-name">Small mirror</td>
+                    <td class="rank">1</td>
+                    <td class="reasoning">Most powerful for signaling. Can generate 5-7 million candelas. Reflection visible beyond horizon.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="1"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="1"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Oil/fuel mixture (10L)</td>
+                    <td class="rank">2</td>
+                    <td class="reasoning">Second most important for signaling. Floats on water and can be ignited with matches.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="2"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="2"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Water container (25L)</td>
+                    <td class="rank">3</td>
+                    <td class="reasoning">Essential to replace perspiration loss. Provides several days of water rations.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="3"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="3"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Army rations (case)</td>
+                    <td class="rank">4</td>
+                    <td class="reasoning">Your basic food supply for survival.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="4"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="4"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Plastic tarp (2m²)</td>
+                    <td class="rank">5</td>
+                    <td class="reasoning">Can collect rainwater and provide shelter from wind and waves.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="5"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="5"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Chocolate bars (2 boxes)</td>
+                    <td class="rank">6</td>
+                    <td class="reasoning">Emergency food supply reserve.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="6"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="6"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Fishing kit with rod</td>
+                    <td class="rank">7</td>
+                    <td class="reasoning">Ranked lower than chocolate - no guarantee of catching fish. Rod could be tent pole.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="7"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="7"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Nylon rope (500m)</td>
+                    <td class="rank">8</td>
+                    <td class="reasoning">Can tie people/equipment together to prevent going overboard. Many uses but not critical.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="8"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="8"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Floating seat cushion</td>
+                    <td class="rank">9</td>
+                    <td class="reasoning">Useful as life preserver if someone falls overboard.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="9"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="9"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Shark repellent (box)</td>
+                    <td class="rank">10</td>
+                    <td class="reasoning">To repel sharks, of course.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="10"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="10"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Rum bottle (80% alcohol)</td>
+                    <td class="rank">11</td>
+                    <td class="reasoning">Contains alcohol - could be antiseptic for wounds. DANGEROUS to drink (causes dehydration).</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="11"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="11"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Transistor radio (small)</td>
+                    <td class="rank">12</td>
+                    <td class="reasoning">Won't receive any radio waves in mid-ocean.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="12"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="12"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Atlantic Ocean maps</td>
+                    <td class="rank">13</td>
+                    <td class="reasoning">Useless without navigation equipment.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="13"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="13"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Mosquito net</td>
+                    <td class="rank">14</td>
+                    <td class="reasoning">NO mosquitoes in the middle of Atlantic Ocean. Useless for anything else.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="14"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="14"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr>
+                    <td class="item-name">Sextant</td>
+                    <td class="rank">15</td>
+                    <td class="reasoning">Useless without measurement tables and chronometer.</td>
+                    <td><input type="number" min="1" max="15" class="personal-input" data-expert="15"></td>
+                    <td><input type="number" min="1" max="15" class="team-input" data-expert="15"></td>
+                    <td class="difference"></td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="3" class="score-label">TOTAL SCORES:</td>
+                    <td class="score-cell" id="personalScore">-</td>
+                    <td class="score-cell" id="teamScore">-</td>
+                   <!-- <td class="score-cell" id="totalDifference">-</td>-->
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="button-container">
+            <button onclick="calculateScores()">Calculate Scores</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
